@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://227dp64kpl50"]
+
+[ext_resource type="TileSet" uid="uid://wob7gxigdqob" path="res://level_tile_set.tres" id="1_phg7v"]
+[ext_resource type="Script" path="res://level_tile_map.gd" id="3_ywa33"]
+
+[node name="LevelTileMap" type="TileMap"]
+tile_set = ExtResource("1_phg7v")
+format = 2
+layer_0/name = "Background"
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(1769582, 65537, 65536)
+layer_1/name = "Foreground"
+layer_1/tile_data = PackedInt32Array()
+script = ExtResource("3_ywa33")
