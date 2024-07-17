@@ -56,6 +56,9 @@ func border_tile_setup(tile : TileData):
 
 
 func _ready():
+	$ExtraBackground1.show()
+	$ExtraBackground2.show()
+
 	if update_tile_set:
 		var setup_keys : Array = tiles_setup.keys()
 

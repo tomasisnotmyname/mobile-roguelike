@@ -27,7 +27,6 @@ func _physics_process(delta):
 	# Handles moving left and right, as well as slowing down or stopping immediately when hitting walls.
 	direction.x = Input.get_axis('left', 'right')
 	if direction.x:
-		print('!!!!')
 		velocity.x = move_toward(velocity.x, direction.x * speed, speed/10)
 	elif is_on_wall():
 		velocity.x = 0
