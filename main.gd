@@ -1,3 +1,4 @@
+# plans:
 # learn more about lightning and shadows
 # https://www.gdquest.com/tutorial/godot/2d/limiting-vision-with-lights/
 #
@@ -12,5 +13,7 @@
 
 extends Node
 
+# CanvasModulate node darkens all things drawn in the scene, so it's more convenient to hide it while editting.
+# This method shows it at the start of runtime.
 func _ready():
 	$CanvasModulate.show()

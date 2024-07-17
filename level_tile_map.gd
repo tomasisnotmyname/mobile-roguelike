@@ -1,7 +1,9 @@
+# This script is used to update each TileData in the TileSet of LevelTileMap.
+
+
 extends TileMap
 
-
-
+# It doesn't do anything unless this var is true.
 @export var update_tile_set : bool = false
 @export_group('Updated Properties')
 @export_range(0.0, 1.0) var base_tile_darkness : float = 0.0
@@ -14,10 +16,13 @@ var tiles_setup : Dictionary = {
 	'Border Alternative' : Callable(self, 'border_tile_setup')
 }
 
+# Used to conveniently add the same collission polygon to tiles.
 var square_polygon := PackedVector2Array([Vector2(-32,-32), Vector2(32,-32), Vector2(32,32), Vector2(-32,32)])
 
+# Used across all methods.
 var tile_set_source : TileSetAtlasSource
 var base_tile_id : Vector2i
+
 
 
 func base_tile_setup(tile : TileData):
@@ -25,6 +30,7 @@ func base_tile_setup(tile : TileData):
 	tile.add_collision_polygon(0)
 	tile.set_collision_polygon_points(0, 0, square_polygon)
 	tile.modulate = tile.modulate.darkened(base_tile_darkness)
+
 
 func background_tile_setup(tile : TileData):
 	tile.set_custom_data('Name', 'Background')
@@ -48,6 +54,7 @@ func border_tile_setup(tile : TileData):
 	tile.modulate = tile.modulate.darkened(border_darkness)
 
 
+
 func _ready():
 	if update_tile_set:
 		var setup_keys : Array = tiles_setup.keys()
@@ -67,5 +74,6 @@ func _ready():
 						tile_set_source.create_alternative_tile(base_tile_id, alternative_index)
 					tiles_setup[setup_keys[alternative_index]].call(tile_set_source.get_tile_data(base_tile_id, alternative_index))
 
+		# this saves the changes to remain outside of runtime and updates the visuals at runtime.
 		print(ResourceSaver.save(tile_set))
 		update_internals()

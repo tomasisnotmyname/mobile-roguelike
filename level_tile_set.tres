@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://wob7gxigdqob"]
 
-[ext_resource type="Texture2D" uid="uid://0uyek3mft45l" path="res://tiles_spritesheet.png" id="1_u55xg"]
-[ext_resource type="Texture2D" uid="uid://kvlil8jkpokt" path="res://test_tile.png" id="2_bkdcq"]
+[ext_resource type="Texture2D" uid="uid://0uyek3mft45l" path="res://textures/tiles_spritesheet.png" id="1_2tndr"]
+[ext_resource type="Texture2D" uid="uid://kvlil8jkpokt" path="res://textures/test_tile.png" id="2_eqo5q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7e3ho"]
-texture = ExtResource("1_u55xg")
+texture = ExtResource("1_2tndr")
 texture_region_size = Vector2i(64, 64)
 0:0/next_alternative_id = 3
 0:0/0 = 0
@@ -40,7 +40,7 @@ texture_region_size = Vector2i(64, 64)
 0:1/2/custom_data_0 = "Border"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h85k3"]
-texture = ExtResource("2_bkdcq")
+texture = ExtResource("2_eqo5q")
 texture_region_size = Vector2i(64, 64)
 0:0/next_alternative_id = 3
 0:0/0 = 0

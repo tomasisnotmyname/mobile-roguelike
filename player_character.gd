@@ -17,19 +17,22 @@ func face(direction : int):
 func _physics_process(delta):
 	var direction := Vector2.ZERO
 
-	direction.x = Input.get_axis('left', 'right')
-	if direction.x:
-		velocity.x = move_toward(velocity.x, direction.x * speed, speed/10)
-	elif is_on_wall():
-		velocity.x = 0
-	else:
-		velocity.x = move_toward(velocity.x, 0, speed/10)
-
+	# Handles jumping, and in the future dropping.
 	direction.y = Input.get_axis('up', 'down')
 	if is_on_floor() and direction.y < 0:
 		velocity.y = jump_velocity
 	elif not is_on_floor():
 		velocity.y += gravity * delta
+
+	# Handles moving left and right, as well as slowing down or stopping immediately when hitting walls.
+	direction.x = Input.get_axis('left', 'right')
+	if direction.x:
+		print('!!!!')
+		velocity.x = move_toward(velocity.x, direction.x * speed, speed/10)
+	elif is_on_wall():
+		velocity.x = 0
+	else:
+		velocity.x = move_toward(velocity.x, 0, speed/10)
 
 	if velocity:
 		if velocity.x > 0:

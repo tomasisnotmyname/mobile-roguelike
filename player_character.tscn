@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cghkc20j83gko"]
 
-[ext_resource type="Script" path="res://character_body_2d.gd" id="1_tlarp"]
+[ext_resource type="Script" path="res://player_character.gd" id="1_tlarp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnm8g"]
 size = Vector2(32, 48)
 
-[node name="CharacterBody2D" type="CharacterBody2D" node_paths=PackedStringArray("interactable_area")]
+[node name="PlayerCharacter" type="CharacterBody2D" node_paths=PackedStringArray("interactable_area")]
 floor_stop_on_slope = false
 floor_block_on_wall = false
 script = ExtResource("1_tlarp")
