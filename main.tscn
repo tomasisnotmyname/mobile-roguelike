@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_axl5g"]
 [ext_resource type="PackedScene" uid="uid://227dp64kpl50" path="res://level_tile_map.tscn" id="2_y4joo"]
-[ext_resource type="Script" path="res://CanvasDarkness.gd" id="3_882hj"]
+[ext_resource type="Script" path="res://canvas_darkness.gd" id="3_882hj"]
 [ext_resource type="PackedScene" uid="uid://cghkc20j83gko" path="res://player_character.tscn" id="3_dbkvd"]
 [ext_resource type="Texture2D" uid="uid://gmccq3yx4riv" path="res://textures/2d_lights_and_shadows_neutral_point_light.webp" id="4_5b2hw"]
 [ext_resource type="Texture2D" uid="uid://d4nu57ok18t2n" path="res://textures/ArrowButtons.png" id="7_yur7r"]
@@ -180,111 +180,120 @@ metadata/_edit_use_anchors_ = true
 
 [node name="GUI" type="CanvasLayer" parent="."]
 
-[node name="ArrowButtons" type="Control" parent="GUI"]
+[node name="ArrowPad" type="Control" parent="GUI"]
 modulate = Color(1, 1, 1, 0.486275)
 layout_mode = 3
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 grow_vertical = 0
+scale = Vector2(1.5, 1.5)
 
-[node name="UpLeftButton" type="TextureButton" parent="GUI/ArrowButtons"]
+[node name="UpLeftButton" type="TextureButton" parent="GUI/ArrowPad"]
 layout_mode = 0
 offset_left = 40.0
 offset_top = -216.0
 offset_right = 90.325
 offset_bottom = -152.0
 focus_mode = 0
+mouse_filter = 1
 action_mode = 0
 texture_normal = SubResource("AtlasTexture_kus0f")
 texture_hover = SubResource("AtlasTexture_422ib")
 script = ExtResource("8_tkmkt")
 
-[node name="UpButton" type="TextureButton" parent="GUI/ArrowButtons"]
+[node name="UpButton" type="TextureButton" parent="GUI/ArrowPad"]
 layout_mode = 0
 offset_left = 93.0
 offset_top = -224.0
 offset_right = 143.325
 offset_bottom = -160.0
 focus_mode = 0
+mouse_filter = 1
 action_mode = 0
 texture_normal = SubResource("AtlasTexture_vkuqj")
 texture_hover = SubResource("AtlasTexture_542yp")
 script = ExtResource("8_tkmkt")
 
-[node name="UpRightButton" type="TextureButton" parent="GUI/ArrowButtons"]
+[node name="UpRightButton" type="TextureButton" parent="GUI/ArrowPad"]
 layout_mode = 0
 offset_left = 133.0
 offset_top = -216.0
 offset_right = 183.325
 offset_bottom = -152.0
 focus_mode = 0
+mouse_filter = 1
 action_mode = 0
 texture_normal = SubResource("AtlasTexture_lhnlr")
 texture_hover = SubResource("AtlasTexture_ibt6p")
 script = ExtResource("8_tkmkt")
 
-[node name="RightButton" type="TextureButton" parent="GUI/ArrowButtons"]
+[node name="RightButton" type="TextureButton" parent="GUI/ArrowPad"]
 layout_mode = 0
 offset_left = 136.0
 offset_top = -164.0
 offset_right = 186.325
 offset_bottom = -100.0
 focus_mode = 0
+mouse_filter = 1
 action_mode = 0
 texture_normal = SubResource("AtlasTexture_gyntl")
 texture_hover = SubResource("AtlasTexture_as738")
 script = ExtResource("8_tkmkt")
 
-[node name="DownRightButton" type="TextureButton" parent="GUI/ArrowButtons"]
+[node name="DownRightButton" type="TextureButton" parent="GUI/ArrowPad"]
 layout_mode = 0
 offset_left = 132.0
 offset_top = -125.0
 offset_right = 182.325
 offset_bottom = -61.0
 focus_mode = 0
+mouse_filter = 1
 action_mode = 0
 texture_normal = SubResource("AtlasTexture_tqsjs")
 texture_hover = SubResource("AtlasTexture_i1nsk")
 script = ExtResource("8_tkmkt")
 
-[node name="DownButton" type="TextureButton" parent="GUI/ArrowButtons"]
+[node name="DownButton" type="TextureButton" parent="GUI/ArrowPad"]
 layout_mode = 0
 offset_left = 95.0
 offset_top = -121.0
 offset_right = 145.325
 offset_bottom = -57.0
 focus_mode = 0
+mouse_filter = 1
 action_mode = 0
 texture_normal = SubResource("AtlasTexture_sttv0")
 texture_hover = SubResource("AtlasTexture_k410d")
 script = ExtResource("8_tkmkt")
 
-[node name="DownLeftButton" type="TextureButton" parent="GUI/ArrowButtons"]
+[node name="DownLeftButton" type="TextureButton" parent="GUI/ArrowPad"]
 layout_mode = 0
 offset_left = 41.0
 offset_top = -125.0
 offset_right = 91.325
 offset_bottom = -61.0
 focus_mode = 0
+mouse_filter = 1
 action_mode = 0
 texture_normal = SubResource("AtlasTexture_th37j")
 texture_hover = SubResource("AtlasTexture_qnv76")
 script = ExtResource("8_tkmkt")
 
-[node name="LeftButton" type="TextureButton" parent="GUI/ArrowButtons"]
+[node name="LeftButton" type="TextureButton" parent="GUI/ArrowPad"]
 layout_mode = 0
 offset_left = 32.0
 offset_top = -164.0
 offset_right = 82.325
 offset_bottom = -100.0
 focus_mode = 0
+mouse_filter = 1
 action_mode = 0
 texture_normal = SubResource("AtlasTexture_6c753")
 texture_hover = SubResource("AtlasTexture_pfim4")
 script = ExtResource("8_tkmkt")
 
-[node name="Form" type="Sprite2D" parent="GUI/ArrowButtons"]
+[node name="Form" type="Sprite2D" parent="GUI/ArrowPad"]
 position = Vector2(128, -128)
 texture = ExtResource("7_yur7r")
 region_enabled = true

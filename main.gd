@@ -1,4 +1,17 @@
-#current plans:
+#Change list:
+# Created a global log_printer that prints requested events when called
+# and stops events from clammering the output log when they're requested too often.
+# Put calls for it in ArrowButton and PlayerCharacter.
+# Renamed ArrowButtons node into ArrowPad, for disctinction between the node and its children.
+# Made small improvements for ArrowPad.
+# Changed PlayerCharacter's default speed and jump_velocity.
+
+
+
+#Current plans:
+# Allow user to seamlessly change movement direction by swiping to a different arrow button on the ArrowPad.
+# Add in-game settings, in the pause menu, that can change resolution and location of the ArrowPad.
+#
 # tools
 # give character one or two slots for items
 # make a pickaxe
@@ -7,8 +20,8 @@
 # jumping or moving down makes character face up or down respectively
 # interactable area moves along with the facing direction
 
-#notes
-# maybe no down left and down right buttons
+#Notes
+# maybe no down left and down right buttons on ArrowPad
 
 
 extends Node

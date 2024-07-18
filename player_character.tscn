@@ -9,7 +9,6 @@ size = Vector2(32, 48)
 floor_stop_on_slope = false
 floor_block_on_wall = false
 script = ExtResource("1_tlarp")
-speed = 250.0
 interactable_area = NodePath("FlippingParts/InteractableArea")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
