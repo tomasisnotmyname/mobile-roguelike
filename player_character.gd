@@ -21,7 +21,7 @@ func _physics_process(delta):
 	# Handles jumping, and in the future dropping.
 	direction.y = Input.get_axis('up', 'down')
 	if is_on_floor() and direction.y < 0:
-		Log._print(time, self.name, 'jumping')
+		Log._print('jumping', self.name, time)
 		velocity.y = jump_velocity
 	elif not is_on_floor():
 		velocity.y += gravity * delta
@@ -29,7 +29,7 @@ func _physics_process(delta):
 	# Handles moving left and right, as well as slowing down or stopping immediately when hitting walls.
 	direction.x = Input.get_axis('left', 'right')
 	if direction.x:
-		Log._print(time, self.name, 'running')
+		Log._print('running', self.name, time)
 		velocity.x = move_toward(velocity.x, direction.x * speed, speed/10)
 	elif is_on_wall():
 		velocity.x = 0

@@ -1,10 +1,7 @@
 #Change list:
-# Change PlayerCharacter collision polygon.
-#
-# Changed Godot version from 4.2.2 to 4.3-dev6.
+
 
 #Current plans:
-# Allow user to seamlessly change movement direction by swiping to a different arrow button on the ArrowPad.
 # Add in-game settings, in the pause menu, that can change resolution and location of the ArrowPad.
 #
 # tools

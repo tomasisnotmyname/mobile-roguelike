@@ -17,20 +17,20 @@ func _ready():
 
 
 func _on_pressed():
-	Log._print(Time.get_ticks_msec(), self.name, 'pressed')
+	Log._print('pressed', self.name, Time.get_ticks_msec())
 	if Input.is_action_pressed('left_mouse_button'):
 		for action in input_actions:
 			Input.action_press(action)
 
 func _on_released():
-	Log._print(Time.get_ticks_msec(), self.name, 'released')
+	Log._print('released', self.name, Time.get_ticks_msec())
 	for action in input_actions:
 		Input.action_release(action)
 
 func _on_mouse_entered():
-	Log._print(Time.get_ticks_msec(), self.name, 'mouse_entered')
+	Log._print('mouse_entered', self.name, Time.get_ticks_msec())
 	_on_pressed()
 
 func _on_mouse_exited():
-	Log._print(Time.get_ticks_msec(), self.name, 'mouse_exited')
+	Log._print('mouse_exited', self.name, Time.get_ticks_msec())
 	_on_released()
