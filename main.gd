@@ -1,12 +1,7 @@
 #Change list:
-# Created a global log_printer that prints requested events when called
-# and stops events from clammering the output log when they're requested too often.
-# Put calls for it in ArrowButton and PlayerCharacter.
-# Renamed ArrowButtons node into ArrowPad, for disctinction between the node and its children.
-# Made small improvements for ArrowPad.
-# Changed PlayerCharacter's default speed and jump_velocity.
-
-
+# Change PlayerCharacter collision polygon.
+#
+# Changed Godot version from 4.2.2 to 4.3-dev6.
 
 #Current plans:
 # Allow user to seamlessly change movement direction by swiping to a different arrow button on the ArrowPad.
@@ -20,8 +15,18 @@
 # jumping or moving down makes character face up or down respectively
 # interactable area moves along with the facing direction
 
-#Notes
-# maybe no down left and down right buttons on ArrowPad
+#Problems:
+# Touch doesn't work as mouse with ArrowPad on mobile device.
+# It's hard to parkour in tight spaces with PlayerCharacter.
+# When changing movement direction with ArrowPad without releasing the mouse button, the direction is stuck until mouse exits.
+
+#Ideas:
+# No down left and down right buttons on ArrowPad.
+#
+# Bottom collision of PlayerCharacter gets wider when they run and thinner when they stand still.
+# Player can't change direction when in air / horizontal velocity is slower in air.
+#
+# Lower PlayerCharacter.
 
 
 extends Node

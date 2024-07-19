@@ -10,5 +10,4 @@ layer_0/name = "Background"
 layer_0/z_index = -1
 layer_0/tile_data = PackedInt32Array(1769582, 65537, 65536)
 layer_1/name = "Foreground"
-layer_1/tile_data = PackedInt32Array()
 script = ExtResource("3_ywa33")

@@ -150,8 +150,9 @@ visible = false
 color = Color(0, 0, 0, 1)
 script = ExtResource("3_882hj")
 
-[node name="PlayerCharacter" parent="Level" instance=ExtResource("3_dbkvd")]
+[node name="PlayerCharacter" parent="Level" node_paths=PackedStringArray("interactable_area") instance=ExtResource("3_dbkvd")]
 position = Vector2(640, 160)
+interactable_area = NodePath("FlippingParts/InteractableArea")
 
 [node name="PointLight2D" type="PointLight2D" parent="Level/PlayerCharacter"]
 shadow_enabled = true
