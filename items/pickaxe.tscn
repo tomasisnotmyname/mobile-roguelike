@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn6dxanvjr8ee"]
+
+[ext_resource type="Texture2D" uid="uid://gvct6rpur32w" path="res://textures/pickaxe.png" id="1_lycji"]
+[ext_resource type="PackedScene" uid="uid://8qnlvxh8t548" path="res://items/item.tscn" id="1_uq7og"]
+[ext_resource type="Script" path="res://items/pickaxe.gd" id="2_4qwfi"]
+
+[node name="Pickaxe" instance=ExtResource("1_uq7og")]
+disable_mode = 0
+script = ExtResource("2_4qwfi")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("1_lycji")
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(0, -16, 14, -12, 16, -10, 2, -10, 2, 15, 0, 16, -2, 15, -2, -10, -16, -10, -14, -12)

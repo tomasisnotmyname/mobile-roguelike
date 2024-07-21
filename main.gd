@@ -1,20 +1,13 @@
 #Change list:
 
-
 #Current plans:
-# Add in-game settings, in the pause menu, that can change resolution and location of the ArrowPad.
-#
-# tools
-# give character one or two slots for items
-# make a pickaxe
 # interacting with blocks while holding pickaxe breaks them
+# drill breaks them faster? only horizontally?
 # borders are unbreakable
 # jumping or moving down makes character face up or down respectively
-# interactable area moves along with the facing direction
 
 #Problems:
-# Touch doesn't work as mouse with ArrowPad on mobile device.
-# It's hard to parkour in tight spaces with PlayerCharacter.
+# Problems with pick up button.
 # When changing movement direction with ArrowPad without releasing the mouse button, the direction is stuck until mouse exits.
 
 #Ideas:
@@ -24,6 +17,10 @@
 # Player can't change direction when in air / horizontal velocity is slower in air.
 #
 # Lower PlayerCharacter.
+#
+# Sort GUI children into GameplayUI and MenuUI
+#
+# Add drop button.
 
 
 extends Node

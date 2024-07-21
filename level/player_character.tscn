@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://cghkc20j83gko"]
+
+[ext_resource type="Script" path="res://level/player_character.gd" id="1_tlarp"]
+[ext_resource type="Texture2D" uid="uid://bxvphk7s7dc2f" path="res://textures/player.png" id="2_fup1d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnm8g"]
+size = Vector2(47, 58)
+
+[node name="PlayerCharacter" type="CharacterBody2D" node_paths=PackedStringArray("interactable_area")]
+z_index = 1
+collision_layer = 2
+floor_stop_on_slope = false
+floor_block_on_wall = false
+script = ExtResource("1_tlarp")
+interactable_area = NodePath("InteractableArea")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-15, 9, -8, 0, -8, -24, 9, -24, 9, 0, 15, 9, 15, 32, -15, 32)
+
+[node name="InteractableArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_nnm8g")
+
+[node name="FlippingParts" type="Node2D" parent="."]
+
+[node name="BodySprite" type="Sprite2D" parent="FlippingParts"]
+position = Vector2(0, 4)
+texture = ExtResource("2_fup1d")
+region_enabled = true
+region_rect = Rect2(17, 8, 29, 56)
+
+[node name="Eyes" type="Node2D" parent="FlippingParts"]
+position = Vector2(-2, -9)
+
+[node name="Sprite2D" type="Sprite2D" parent="FlippingParts/Eyes"]
+position = Vector2(4, -7)
+texture = ExtResource("2_fup1d")
+region_enabled = true
+region_rect = Rect2(95, 15, 6, 2)
+
+[connection signal="body_entered" from="InteractableArea" to="." method="_on_interactable_area_item_entered"]
+[connection signal="body_exited" from="InteractableArea" to="." method="_on_interactable_area_body_exited"]

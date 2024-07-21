@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://227dp64kpl50"]
 
-[ext_resource type="TileSet" uid="uid://wob7gxigdqob" path="res://level_tile_set.tres" id="1_phg7v"]
-[ext_resource type="Script" path="res://level_tile_map.gd" id="3_ywa33"]
+[ext_resource type="TileSet" uid="uid://wob7gxigdqob" path="res://level/level_tile_set.tres" id="1_phg7v"]
+[ext_resource type="Script" path="res://level/level_tile_map.gd" id="3_ywa33"]
 
 [node name="LevelTileMap" type="TileMap"]
 tile_set = ExtResource("1_phg7v")
