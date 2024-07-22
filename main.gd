@@ -1,13 +1,23 @@
 #Change list:
+# Revised and retextured the LevelTileMap and its TileSet.
+# Added functionality to items.
+# Fixed pick up button.
+# Fixed pause button.
 
 #Current plans:
-# interacting with blocks while holding pickaxe breaks them
-# drill breaks them faster? only horizontally?
-# borders are unbreakable
-# jumping or moving down makes character face up or down respectively
+# Drill breaks blocks faster and only horizontally.
+# Add a cooldown bar item usage / an action bar that shows when block will break based on their durability.
+#
+# Figure out how to use terrains.
+# Write script that procedurally generates levels using patterns as chunks and given parameters.
+# Parameters:
+# The level size to determine borders and how many chunks it needs.
+# Required rooms (chunks) for player starting area, level exit, and any additional special locations.
+# Depth for determining the block properties as well as background colors and such.
 
-#Problems:
-# Problems with pick up button.
+
+#Bugs:
+# (Not relevant for mobile experience) 
 # When changing movement direction with ArrowPad without releasing the mouse button, the direction is stuck until mouse exits.
 
 #Ideas:
@@ -21,6 +31,7 @@
 # Sort GUI children into GameplayUI and MenuUI
 #
 # Add drop button.
+
 
 
 extends Node

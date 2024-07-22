@@ -8,11 +8,17 @@ var moving_offset : Vector2
 func _show():
 	show()
 	$DoneButton.disabled = false
+	for node in movable_UI_nodes:
+		if node is Button:
+			node.disabled = true
 	set_process_input(true)
 
 func _hide():
 	hide()
 	$DoneButton.disabled = true
+	for node in movable_UI_nodes:
+		if node is Button:
+			node.disabled = false
 	set_process_input(false)
 
 

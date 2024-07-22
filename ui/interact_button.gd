@@ -33,5 +33,7 @@ func _on_player_character_cant_interact_with_item(item: Item) -> void:
 func _on_pressed() -> void:
 	if items.size() == 1:
 		%PlayerCharacter.pick_up(items[0])
+		items.clear()
+		_hide()
 	else:
 		pass

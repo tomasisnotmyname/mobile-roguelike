@@ -2,7 +2,7 @@ extends Node
 
 var recently_logged_events : Array
 
-func _print(event : String, event_source := '', event_time := 0.0):
+func _print(event : String, event_source := '', event_time := 0.0, delay:= 0):
 	event_time = event_time / 1000
 	var event_id = [event_source, event]
 
@@ -14,6 +14,7 @@ func _print(event : String, event_source := '', event_time := 0.0):
 		print(event)
 		print()
 
+	if delay:
 		recently_logged_events.append(event_id)
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(delay).timeout
 		recently_logged_events.erase(event_id)

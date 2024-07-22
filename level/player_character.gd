@@ -4,21 +4,23 @@ extends CharacterBody2D
 @export_range(-1000.0, 0.0) var jump_velocity : float = -400.0
 @export_range(0.0, 1960.0) var gravity : float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-@export var interactable_area : Area2D
+@onready var eyes_node : Node2D = $FlippingParts/Eyes
 
 var equipped_item: Item
 var second_item: Item
+
+var facing_direction: Vector2
+var vertical_directions : Dictionary = {-1: -15, 0: 0, 1: 15}
 
 signal can_interact_with_item(item: Item)
 signal cant_interact_with_item(item: Item)
 signal swapped_equipped_item(item: Item)
 
-const LEFT : int = -1
-const RIGHT : int = 1
-
 
 
 func pick_up(item: Item):
+	$InteractableArea.monitoring = false
+
 	item.process_mode = PROCESS_MODE_DISABLED
 	get_parent().remove_child(item)
 
@@ -31,11 +33,14 @@ func pick_up(item: Item):
 	else:
 		equip(item)
 
+	$InteractableArea.monitoring = true
+
 
 func equip(item):
 	$FlippingParts.add_child(item)
 	equipped_item = item
 	equipped_item.equip()
+	
 
 
 func unequip(item):
@@ -58,26 +63,23 @@ func drop_equipped_item():
 	equipped_item.process_mode = PROCESS_MODE_INHERIT
 
 
-var bruh_amplifier = 0
-var bruh_pitcher = 0
+
 func use():
 	if equipped_item:
-		equipped_item.use('peepee')
-	else:
-		var bruh_audio_player = AudioStreamPlayer.new()
-		add_child(bruh_audio_player)
-		bruh_audio_player.stream = load('res://screamer.mp3')
-		bruh_audio_player.volume_db += bruh_amplifier
-		bruh_audio_player.pitch_scale -= bruh_pitcher
-		bruh_amplifier += 10
-		bruh_pitcher += 0.05
-		bruh_audio_player.play()
-		await bruh_audio_player.finished
-		bruh_audio_player.queue_free()
+		equipped_item.use()
 
 
-func face(direction : int):
-	$FlippingParts.scale.x = direction
+func face(direction : Vector2i):
+	if direction.x != 0:
+		facing_direction.x = direction.x
+		$FlippingParts.scale.x = direction.x
+
+	if direction.y != facing_direction.y:
+		eyes_node.rotation_degrees = vertical_directions[direction.y]
+		facing_direction.y = direction.y
+
+	if equipped_item:
+		equipped_item.point(direction)
 
 
 
@@ -100,18 +102,15 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed/10)
 
-	if velocity:
-		if velocity.x > 0:
-			face(RIGHT)
-		elif velocity.x < 0:
-			face(LEFT)
-
-		move_and_slide()
+	if direction != facing_direction:
+		face(direction)
+	move_and_slide()
 
 
 
 func _on_interactable_area_item_entered(item: Item) -> void:
 	can_interact_with_item.emit(item)
+
 
 func _on_interactable_area_body_exited(item: Item) -> void:
 	cant_interact_with_item.emit(item)

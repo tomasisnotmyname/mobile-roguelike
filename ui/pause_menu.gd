@@ -2,6 +2,10 @@ extends Control
 
 
 func _ready():
+	_hide()
+
+
+func _hide():
 	hide()
 	$MoveUIControl._hide()
 

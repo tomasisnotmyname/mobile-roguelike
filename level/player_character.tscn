@@ -6,13 +6,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnm8g"]
 size = Vector2(47, 58)
 
-[node name="PlayerCharacter" type="CharacterBody2D" node_paths=PackedStringArray("interactable_area")]
+[node name="PlayerCharacter" type="CharacterBody2D"]
 z_index = 1
 collision_layer = 2
 floor_stop_on_slope = false
 floor_block_on_wall = false
 script = ExtResource("1_tlarp")
-interactable_area = NodePath("InteractableArea")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-15, 9, -8, 0, -8, -24, 9, -24, 9, 0, 15, 9, 15, 32, -15, 32)
@@ -20,6 +19,7 @@ polygon = PackedVector2Array(-15, 9, -8, 0, -8, -24, 9, -24, 9, 0, 15, 9, 15, 32
 [node name="InteractableArea" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 4
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
 position = Vector2(-0.5, 4)

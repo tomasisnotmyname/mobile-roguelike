@@ -9,7 +9,7 @@ func _ready():
 func _on_pause_button_pressed() -> void:
 	if $PauseMenu.visible:
 		get_tree().paused = false
-		$PauseMenu.hide()
+		$PauseMenu._hide()
 	else:
 		get_tree().paused = true
 		$PauseMenu.show()
