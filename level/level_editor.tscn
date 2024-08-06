@@ -1,0 +1,117 @@
+[gd_scene load_steps=3 format=4 uid="uid://bfm4rn6iy8hlg"]
+
+[ext_resource type="Script" path="res://level/level_editor.gd" id="1_r7q40"]
+[ext_resource type="PackedScene" uid="uid://c3ayj3s3sck55" path="res://level/area_tile_map.tscn" id="2_p52mc"]
+
+[node name="LevelEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 1
+script = ExtResource("1_r7q40")
+area_tile_map_scene = ExtResource("2_p52mc")
+metadata/_edit_lock_ = true
+
+[node name="AreaTileMaps" type="Node2D" parent="."]
+
+[node name="StartingArea" parent="AreaTileMaps" instance=ExtResource("2_p52mc")]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAEAAAABAAAAAAAAAAEAAAACAAAAAAAAAAEAAAADAAAAAAAAAAEAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAA=")
+starting_area = true
+
+[node name="ParkourArea" parent="AreaTileMaps" instance=ExtResource("2_p52mc")]
+position = Vector2(320, 0)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAcAAAAAAAAAAAACAAcAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAAFAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAAHAAcAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAADAAQAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAACAAEAAAAAAAAAAAA=")
+probability = 0.1
+
+[node name="WideDrop" parent="AreaTileMaps" instance=ExtResource("2_p52mc")]
+position = Vector2(896, 0)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAsAAAAAAAAAAAAHAAsAAAAAAAAAAAAHAAcAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAABAAYAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAABAAsAAAAAAAAAAAACAAsAAAAAAAAAAAADAAsAAAAAAAAAAAAEAAsAAAAAAAAAAAAFAAsAAAAAAAAAAAAGAAsAAAAAAAAAAAAEAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAGAAcAAAAAAAAAAAABAAcAAAAAAAAAAAACAAQAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAgAAAAAAAAAAAA=")
+probability = 0.1
+
+[node name="VerticalTunnel" parent="AreaTileMaps" instance=ExtResource("2_p52mc")]
+position = Vector2(1472, 0)
+tile_map_data = PackedByteArray("AAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAADAAYAAAAAAAAAAAADAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAsAAAAAAAAAAAADAAgAAAAAAAAAAAADAAkAAAAAAAAAAAADAAoAAAAAAAAAAAADAAMAAAAAAAAAAAAAAAMAAAAAAAAAAAADAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAABAAQAAAAAAAAAAAACAAYAAAAAAAAAAAACAAgAAAAAAAAAAAABAAsAAAAAAAAAAAABAAoAAAAAAAAAAAA=")
+probability = 0.1
+
+[node name="HorizontalTunnel1" parent="AreaTileMaps" instance=ExtResource("2_p52mc")]
+position = Vector2(1792, 0)
+tile_map_data = PackedByteArray("AAADAAMAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAA=")
+probability = 0.1
+
+[node name="HorizontalTunnel2" parent="AreaTileMaps" instance=ExtResource("2_p52mc")]
+position = Vector2(2112, 0)
+tile_map_data = PackedByteArray("AAADAAMAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAA=")
+probability = 0.1
+
+[node name="Pile" parent="AreaTileMaps" instance=ExtResource("2_p52mc")]
+position = Vector2(2432, 0)
+tile_map_data = PackedByteArray("AAADAAMAAAAAAAAAAAADAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAIAAAAAAAAAAAABAAMAAAAAAAAAAAAAAAMAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAIAAAAAAAAAAAA=")
+probability = 0.05
+
+[node name="FilledArea" parent="AreaTileMaps" instance=ExtResource("2_p52mc")]
+position = Vector2(2752, 0)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAACAAIAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAACAAMAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAEAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAACAAEAAAAAAAAAAAAAAAMAAAAAAAAAAAADAAMAAAAAAAAAAAA=")
+probability = 0.3
+
+[node name="EnclosedArea" parent="AreaTileMaps" instance=ExtResource("2_p52mc")]
+position = Vector2(3072, 0)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAMAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAACAAMAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAADAAMAAAAAAAAAAAABAAEAAAAAAAAAAAA=")
+probability = 0.15
+
+[node name="FileNameEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 307.0
+offset_right = 223.0
+offset_bottom = 338.0
+text = "new_level.tres"
+placeholder_text = "file_name.tres"
+alignment = 1
+expand_to_text_length = true
+
+[node name="SaveButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 49.0
+offset_top = -15.5
+offset_right = 93.0
+offset_bottom = 15.5
+grow_vertical = 2
+focus_mode = 0
+text = "Save"
+
+[node name="LoadButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 117.0
+offset_top = 1.0
+offset_right = 163.0
+offset_bottom = 32.0
+grow_vertical = 2
+focus_mode = 0
+text = "Load"
+
+[node name="ClearButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 62.0
+offset_top = 49.0
+offset_right = 108.0
+offset_bottom = 80.0
+grow_vertical = 2
+focus_mode = 0
+text = "Clear"
+
+[connection signal="text_changed" from="FileNameEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="ClearButton" to="." method="_on_clear_button_pressed"]

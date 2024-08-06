@@ -16,5 +16,6 @@ func _on_pause_button_pressed() -> void:
 		#move_child($PauseMenu, $InfoMenu.get_index+1)
 
 
-func _on_action_button_pressed() -> void:
-	%PlayerCharacter.use()
+func _process(_delta: float) -> void:
+	if $ActionButton.is_pressed():
+		%PlayerCharacter.use()

@@ -1,9 +1,9 @@
 [gd_scene load_steps=53 format=3 uid="uid://vsb6jaxc8r4h"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_axl5g"]
-[ext_resource type="PackedScene" uid="uid://227dp64kpl50" path="res://level/level_tile_map.tscn" id="3_6pa3y"]
+[ext_resource type="PackedScene" uid="uid://227dp64kpl50" path="res://level/level_map.tscn" id="3_6pa3y"]
 [ext_resource type="Script" path="res://level/canvas_darkness.gd" id="3_882hj"]
-[ext_resource type="PackedScene" uid="uid://cghkc20j83gko" path="res://level/player_character.tscn" id="3_dbkvd"]
+[ext_resource type="PackedScene" uid="uid://cghkc20j83gko" path="res://player_character.tscn" id="3_dbkvd"]
 [ext_resource type="Texture2D" uid="uid://gmccq3yx4riv" path="res://textures/2d_lights_and_shadows_neutral_point_light.webp" id="4_5b2hw"]
 [ext_resource type="PackedScene" uid="uid://dn6dxanvjr8ee" path="res://items/pickaxe.tscn" id="6_l6l3n"]
 [ext_resource type="Script" path="res://ui/ui.gd" id="6_outks"]
@@ -219,7 +219,7 @@ visible = false
 color = Color(0, 0, 0, 1)
 script = ExtResource("3_882hj")
 
-[node name="LevelTileMap" parent="Level" instance=ExtResource("3_6pa3y")]
+[node name="LevelMap" parent="Level" instance=ExtResource("3_6pa3y")]
 layer_0/modulate = Color(0.76662, 0.76662, 0.76662, 1)
 layer_0/tile_data = PackedInt32Array(1769582, 65537, 65536, 0, 0, 65536, 65536, 0, 65536, 131072, 0, 65536, 196608, 0, 65536, 262144, 0, 65537, 327680, 0, 65536, 393216, 0, 65536, 458752, 0, 65537, 524288, 0, 65536, 589824, 0, 65537, 655360, 0, 65536, 720896, 0, 65536, 786432, 0, 65536, 851968, 0, 65536, 917504, 0, 65536, 983040, 0, 65537, 1048576, 0, 65536, 1114112, 0, 65536, 1179648, 0, 65536, 1245184, 0, 65536, 1, 0, 65536, 65537, 0, 65537, 131073, 0, 65537, 196609, 0, 65537, 262145, 0, 65536, 327681, 0, 65536, 393217, 0, 65536, 458753, 0, 65536, 524289, 0, 65536, 589825, 0, 65536, 655361, 0, 65536, 720897, 0, 65536, 786433, 0, 65537, 851969, 0, 65537, 917505, 0, 65537, 983041, 0, 65536, 1048577, 0, 65536, 1114113, 0, 65536, 1179649, 0, 65536, 1245185, 0, 65537, 2, 0, 65536, 65538, 0, 65536, 131074, 0, 65536, 196610, 0, 65536, 262146, 0, 65536, 327682, 0, 65537, 393218, 0, 65536, 458754, 0, 65536, 524290, 0, 65536, 589826, 0, 65536, 655362, 0, 65536, 720898, 0, 65536, 786434, 0, 65537, 851970, 0, 65536, 917506, 0, 65536, 983042, 0, 65536, 1048578, 0, 65537, 1114114, 0, 65536, 1179650, 0, 65536, 1245186, 0, 65537, 3, 0, 65536, 65539, 0, 65536, 131075, 0, 65537, 196611, 0, 65536, 262147, 0, 65536, 327683, 0, 65536, 393219, 0, 65537, 458755, 0, 65536, 524291, 0, 65536, 589827, 0, 65537, 655363, 0, 65537, 720899, 0, 65536, 786435, 0, 65536, 851971, 0, 65536, 917507, 0, 65536, 983043, 0, 65537, 1048579, 0, 65536, 1114115, 0, 65536, 1179651, 0, 65536, 1245187, 0, 65536, 4, 0, 65536, 65540, 0, 65537, 131076, 0, 65537, 196612, 0, 65536, 262148, 0, 65536, 327684, 0, 65536, 393220, 0, 65536, 458756, 0, 65536, 524292, 0, 65536, 589828, 0, 65536, 655364, 0, 65536, 720900, 0, 65536, 786436, 0, 65537, 851972, 0, 65537, 917508, 0, 65536, 983044, 0, 65536, 1048580, 0, 65536, 1114116, 0, 65536, 1179652, 0, 65536, 1245188, 0, 65537, 5, 0, 65536, 65541, 0, 65536, 131077, 0, 65537, 196613, 0, 65537, 262149, 0, 65536, 327685, 0, 65536, 393221, 0, 65536, 458757, 0, 65537, 524293, 0, 65536, 589829, 0, 65536, 655365, 0, 65536, 720901, 0, 65537, 786437, 0, 65536, 851973, 0, 65536, 917509, 0, 65536, 983045, 0, 65536, 1048581, 0, 65536, 1114117, 0, 65536, 1179653, 0, 65537, 1245189, 0, 65537, 6, 0, 65536, 65542, 0, 65536, 131078, 0, 65536, 196614, 0, 65536, 262150, 0, 65536, 327686, 0, 65536, 393222, 0, 65536, 458758, 0, 65536, 524294, 0, 65537, 589830, 0, 65536, 655366, 0, 65536, 720902, 0, 65536, 786438, 0, 65536, 851974, 0, 65536, 917510, 0, 65536, 983046, 0, 65537, 1048582, 0, 65536, 1114118, 0, 65536, 1179654, 0, 65536, 1245190, 0, 65536, 7, 0, 65537, 65543, 0, 65536, 131079, 0, 65536, 196615, 0, 65536, 262151, 0, 65536, 327687, 0, 65536, 393223, 0, 65536, 458759, 0, 65537, 524295, 0, 65537, 589831, 0, 65536, 655367, 0, 65536, 720903, 0, 65537, 786439, 0, 65536, 851975, 0, 65536, 917511, 0, 65537, 983047, 0, 65536, 1048583, 0, 65536, 1114119, 0, 65536, 1179655, 0, 65536, 1245191, 0, 65536, 8, 0, 65536, 65544, 0, 65536, 131080, 0, 65536, 196616, 0, 65537, 262152, 0, 65537, 327688, 0, 65536, 393224, 0, 65536, 458760, 0, 65536, 524296, 0, 65536, 589832, 0, 65536, 655368, 0, 65536, 720904, 0, 65537, 786440, 0, 65536, 851976, 0, 65536, 917512, 0, 65536, 983048, 0, 65536, 1048584, 0, 65536, 1114120, 0, 65536, 1179656, 0, 65536, 1245192, 0, 65536, 9, 0, 65537, 65545, 0, 65536, 131081, 0, 65536, 196617, 0, 65536, 262153, 0, 65537, 327689, 0, 65536, 393225, 0, 65536, 458761, 0, 65536, 524297, 0, 65536, 589833, 0, 65536, 655369, 0, 65537, 720905, 0, 65536, 786441, 0, 65536, 851977, 0, 65536, 917513, 0, 65536, 983049, 0, 65536, 1048585, 0, 65536, 1114121, 0, 65536, 1179657, 0, 65536, 1245193, 0, 65536, 10, 0, 65536, 65546, 0, 65537, 131082, 0, 65536, 196618, 0, 65536, 262154, 0, 65536, 327690, 0, 65536, 393226, 0, 65536, 458762, 0, 65537, 524298, 0, 65536, 589834, 0, 65537, 655370, 0, 65536, 720906, 0, 65537, 786442, 0, 65536, 851978, 0, 65536, 917514, 0, 65536, 983050, 0, 65537, 1048586, 0, 65536, 1114122, 0, 65537, 1179658, 0, 65537, 1245194, 0, 65536, 11, 0, 65536, 65547, 0, 65536, 131083, 0, 65537, 196619, 0, 65536, 262155, 0, 65536, 327691, 0, 65536, 393227, 0, 65536, 458763, 0, 65536, 524299, 0, 65536, 589835, 0, 65536, 655371, 0, 65537, 720907, 0, 65536, 786443, 0, 65536, 851979, 0, 65536, 917515, 0, 65537, 983051, 0, 65537, 1048587, 0, 65536, 1114123, 0, 65537, 1179659, 0, 65536, 1245195, 0, 65537, 12, 0, 65536, 65548, 0, 65536, 131084, 0, 65536, 196620, 0, 65537, 262156, 0, 65537, 327692, 0, 65536, 393228, 0, 65536, 458764, 0, 65537, 524300, 0, 65536, 589836, 0, 65536, 655372, 0, 65536, 720908, 0, 65536, 786444, 0, 65536, 851980, 0, 65536, 917516, 0, 65536, 983052, 0, 65536, 1048588, 0, 65536, 1114124, 0, 65536, 1179660, 0, 65536, 1245196, 0, 65536, 13, 0, 65536, 65549, 0, 65537, 131085, 0, 65536, 196621, 0, 65536, 262157, 0, 65536, 327693, 0, 65537, 393229, 0, 65536, 458765, 0, 65537, 524301, 0, 65537, 589837, 0, 65536, 655373, 0, 65536, 720909, 0, 65537, 786445, 0, 65536, 851981, 0, 65536, 917517, 0, 65537, 983053, 0, 65537, 1048589, 0, 65536, 1114125, 0, 65537, 1179661, 0, 65536, 1245197, 0, 65537, 14, 0, 65536, 65550, 0, 65536, 131086, 0, 65536, 196622, 0, 65536, 262158, 0, 65536, 327694, 0, 65536, 393230, 0, 65536, 458766, 0, 65537, 524302, 0, 65537, 589838, 0, 65536, 655374, 0, 65536, 720910, 0, 65536, 786446, 0, 65537, 851982, 0, 65536, 917518, 0, 65536, 983054, 0, 65536, 1048590, 0, 65536, 1114126, 0, 65536, 1179662, 0, 65536, 1245198, 0, 65537, 15, 0, 65536, 65551, 0, 65536, 131087, 0, 65536, 196623, 0, 65536, 262159, 0, 65536, 327695, 0, 65536, 393231, 0, 65536, 458767, 0, 65536, 524303, 0, 65536, 589839, 0, 65536, 655375, 0, 65536, 720911, 0, 65536, 786447, 0, 65537, 851983, 0, 65536, 917519, 0, 65536, 983055, 0, 65536, 1048591, 0, 65536, 1114127, 0, 65536, 1179663, 0, 65536, 1245199, 0, 65537, 16, 0, 65536, 65552, 0, 65536, 131088, 0, 65536, 196624, 0, 65536, 262160, 0, 65536, 327696, 0, 65536, 393232, 0, 65536, 458768, 0, 65536, 524304, 0, 65537, 589840, 0, 65536, 655376, 0, 65536, 720912, 0, 65537, 786448, 0, 65536, 851984, 0, 65536, 917520, 0, 65537, 983056, 0, 65536, 1048592, 0, 65536, 1114128, 0, 65537, 1179664, 0, 65536, 1245200, 0, 65536, 17, 0, 65536, 65553, 0, 65536, 131089, 0, 65536, 196625, 0, 65537, 262161, 0, 65536, 327697, 0, 65537, 393233, 0, 65537, 458769, 0, 65536, 524305, 0, 65536, 589841, 0, 65536, 655377, 0, 65536, 720913, 0, 65536, 786449, 0, 65536, 851985, 0, 65536, 917521, 0, 65537, 983057, 0, 65536, 1048593, 0, 65536, 1114129, 0, 65536, 1179665, 0, 65536, 1245201, 0, 65536, 18, 0, 65536, 65554, 0, 65536, 131090, 0, 65536, 196626, 0, 65536, 262162, 0, 65537, 327698, 0, 65536, 393234, 0, 65537, 458770, 0, 65536, 524306, 0, 65536, 589842, 0, 65536, 655378, 0, 65536, 720914, 0, 65536, 786450, 0, 65537, 851986, 0, 65536, 917522, 0, 65536, 983058, 0, 65536, 1048594, 0, 65536, 1114130, 0, 65536, 1179666, 0, 65536, 1245202, 0, 65536, 65555, 0, 65536, 131091, 0, 65536, 196627, 0, 65536, 262163, 0, 65537, 327699, 0, 65537, 393235, 0, 65537, 458771, 0, 65536, 524307, 0, 65536, 589843, 0, 65537, 655379, 0, 65536, 720915, 0, 65536, 786451, 0, 65536, 851987, 0, 65536, 917523, 0, 65536, 983059, 0, 65537, 1048595, 0, 65537, 1114131, 0, 65536, 1179667, 0, 65536, 1245203, 0, 65536, 19, 0, 65536)
 layer_1/tile_data = PackedInt32Array(0, 0, 2, 1, 0, 2, 2, 0, 2, 3, 0, 2, 4, 0, 2, 5, 0, 2, 6, 0, 2, 7, 0, 2, 8, 0, 2, 9, 0, 131073, 10, 0, 131072, 11, 0, 2, 12, 0, 2, 13, 0, 2, 14, 0, 2, 15, 0, 2, 16, 0, 2, 17, 0, 2, 18, 0, 2, 19, 0, 2, 65555, 0, 131072, 131091, 0, 131073, 196627, 0, 131072, 262163, 0, 131072, 327699, 0, 131073, 393235, 0, 131072, 458771, 0, 131072, 524307, 0, 131072, 589843, 0, 131072, 655379, 0, 131073, 720915, 0, 131072, 786451, 0, 131073, 851987, 0, 131072, 917523, 0, 131072, 983059, 0, 131072, 1048595, 0, 131072, 1114131, 0, 131072, 1179667, 0, 131072, 1245203, 0, 131073, 1245184, 0, 131073, 1245185, 0, 131072, 1245186, 0, 131072, 1245187, 0, 131073, 1245188, 0, 131072, 1245189, 0, 131072, 1245190, 0, 131072, 1245191, 0, 131072, 1245192, 0, 131072, 1245193, 0, 131072, 1245194, 0, 131072, 1245195, 0, 131072, 1245196, 0, 131073, 1245197, 0, 131073, 1245198, 0, 131073, 1245199, 0, 131072, 1245200, 0, 131072, 1245201, 0, 131072, 1245202, 0, 131072, 65536, 0, 131072, 131072, 0, 131072, 196608, 0, 131072, 262144, 0, 131072, 327680, 0, 131072, 393216, 0, 131072, 458752, 0, 131073, 524288, 0, 131072, 589824, 0, 131072, 655360, 0, 131072, 720896, 0, 131072, 786432, 0, 131072, 851968, 0, 131072, 917504, 0, 131072, 983040, 0, 131072, 1048576, 0, 131072, 1114112, 0, 131072, 1179648, 0, 131072, 327681, 0, 0, 393217, 0, 0, 720897, 0, 0, 786433, 0, 0, 851969, 0, 0, 917505, 0, 0, 983041, 0, 0, 1048577, 0, 0, 1114113, 0, 0, 1179649, 0, 0, 393218, 0, 0, 458754, 0, 0, 524290, 0, 0, 589826, 0, 0, 655362, 0, 0, 720898, 0, 0, 786434, 0, 1, 1179650, 0, 0, 65539, 0, 0, 786435, 0, 0, 1179651, 0, 0, 65540, 0, 1, 196612, 0, 0, 1114116, 0, 0, 1179652, 0, 0, 65541, 0, 0, 131077, 0, 0, 196613, 0, 1, 1114117, 0, 0, 1179653, 0, 0, 65542, 0, 1, 131078, 0, 0, 196614, 0, 0, 1179654, 0, 1, 65543, 0, 0, 131079, 0, 1, 196615, 0, 1, 262151, 0, 0, 786439, 0, 1, 851975, 0, 1, 1179655, 0, 1, 196616, 0, 0, 262152, 0, 0, 786440, 0, 1, 851976, 0, 0, 1179656, 0, 1, 196617, 0, 1, 262153, 0, 0, 786441, 0, 1, 851977, 0, 1, 917513, 0, 0, 983049, 0, 0, 1179657, 0, 0, 196618, 0, 1, 262154, 0, 0, 327690, 0, 0, 851978, 0, 0, 917514, 0, 0, 983050, 0, 0, 1048586, 0, 0, 1114122, 0, 0, 1179658, 0, 0, 196619, 0, 0, 262155, 0, 0, 327691, 0, 0, 851979, 0, 0, 917515, 0, 0, 983051, 0, 0, 1048587, 0, 0, 1114123, 0, 0, 1179659, 0, 0, 65548, 0, 1, 131084, 0, 0, 196620, 0, 0, 262156, 0, 0, 327692, 0, 1, 589836, 0, 0, 851980, 0, 0, 917516, 0, 0, 983052, 0, 1, 1048588, 0, 0, 1114124, 0, 0, 1179660, 0, 0, 65549, 0, 1, 262157, 0, 0, 327693, 0, 1, 786445, 0, 0, 851981, 0, 0, 1179661, 0, 0, 65550, 0, 0, 262158, 0, 0, 327694, 0, 0, 524302, 0, 0, 589838, 0, 0, 655374, 0, 0, 786446, 0, 1, 851982, 0, 0, 1179662, 0, 1, 65551, 0, 0, 262159, 0, 1, 327695, 0, 1, 524303, 0, 0, 589839, 0, 0, 655375, 0, 0, 786447, 0, 0, 851983, 0, 0, 1179663, 0, 0, 65552, 0, 0, 327696, 0, 0, 524304, 0, 0, 589840, 0, 0, 655376, 0, 0, 786448, 0, 1, 851984, 0, 1, 1179664, 0, 0, 65553, 0, 1, 524305, 0, 1, 589841, 0, 0, 655377, 0, 1, 786449, 0, 1, 851985, 0, 0, 1179665, 0, 1, 65554, 0, 0, 131090, 0, 0, 196626, 0, 0, 393234, 0, 0, 458770, 0, 0, 524306, 0, 0, 589842, 0, 1, 655378, 0, 0, 786450, 0, 1, 851986, 0, 0, 917522, 0, 0, 983058, 0, 0, 1048594, 0, 0, 1114130, 0, 0, 1179666, 0, 0, 786442, 0, 0, 786443, 0, 0, 655372, 0, 0, 786444, 0, 0, 458753, 0, 0, 524289, 0, 0, 589825, 0, 1, 655361, 0, 1, 524294, 0, 0, 589830, 0, 0, 655366, 0, 0, 524295, 0, 0, 589831, 0, 0, 655367, 0, 0, 720903, 0, 0, 524296, 0, 0, 589832, 0, 0, 655368, 0, 0, 720904, 0, 0, 524297, 0, 0, 589833, 0, 0, 655369, 0, 0, 589834, 0, 0, 655370, 0, 0, 458769, 0, 0, 720914, 0, 0, 524291, 0, 0, 589827, 0, 0, 655363, 0, 1, 720899, 0, 0, 786438, 0, 1, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 1, 917517, 0, 0, 851970, 0, 0, 1048585, 0, 0, 1114121, 0, 1, 983053, 0, 0, 1048589, 0, 0, 1114125, 0, 0, 458759, 0, 0, 393219, 0, 1, 262147, 0, 0, 196609, 0, 0, 262148, 0, 0, 131076, 0, 0, 131075, 0, 1)
@@ -257,34 +257,25 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(577, 157)
 
 [node name="Drill" parent="Level" instance=ExtResource("7_gny7d")]
-position = Vector2(490, 1113)
-rotation = 1.05479
+position = Vector2(480, 1072)
 
 [node name="UI" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("6_outks")
 
-[node name="GameplayUI" type="Control" parent="UI"]
-process_mode = 1
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ArrowPad" type="Control" parent="UI/GameplayUI"]
+[node name="ArrowPad" type="Control" parent="UI"]
 modulate = Color(1, 1, 1, 0.486275)
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 48.0
-offset_top = 344.0
+offset_top = -336.0
 offset_right = 240.0
-offset_bottom = 536.0
+offset_bottom = -144.0
 grow_vertical = 0
 scale = Vector2(1.5, 1.5)
 
-[node name="UpLeftButton" type="TextureButton" parent="UI/GameplayUI/ArrowPad"]
+[node name="UpLeftButton" type="TextureButton" parent="UI/ArrowPad"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.00001
@@ -297,7 +288,7 @@ texture_normal = SubResource("AtlasTexture_kus0f")
 texture_hover = SubResource("AtlasTexture_422ib")
 script = ExtResource("8_tkmkt")
 
-[node name="UpButton" type="TextureButton" parent="UI/GameplayUI/ArrowPad"]
+[node name="UpButton" type="TextureButton" parent="UI/ArrowPad"]
 layout_mode = 0
 offset_left = 61.0
 offset_right = 131.0
@@ -309,7 +300,7 @@ texture_normal = SubResource("AtlasTexture_vkuqj")
 texture_hover = SubResource("AtlasTexture_542yp")
 script = ExtResource("8_tkmkt")
 
-[node name="UpRightButton" type="TextureButton" parent="UI/GameplayUI/ArrowPad"]
+[node name="UpRightButton" type="TextureButton" parent="UI/ArrowPad"]
 layout_mode = 0
 offset_left = 101.0
 offset_top = 8.00001
@@ -322,7 +313,7 @@ texture_normal = SubResource("AtlasTexture_lhnlr")
 texture_hover = SubResource("AtlasTexture_ibt6p")
 script = ExtResource("8_tkmkt")
 
-[node name="RightButton" type="TextureButton" parent="UI/GameplayUI/ArrowPad"]
+[node name="RightButton" type="TextureButton" parent="UI/ArrowPad"]
 layout_mode = 0
 offset_left = 104.0
 offset_top = 60.0
@@ -335,7 +326,7 @@ texture_normal = SubResource("AtlasTexture_gyntl")
 texture_hover = SubResource("AtlasTexture_as738")
 script = ExtResource("8_tkmkt")
 
-[node name="DownRightButton" type="TextureButton" parent="UI/GameplayUI/ArrowPad"]
+[node name="DownRightButton" type="TextureButton" parent="UI/ArrowPad"]
 layout_mode = 0
 offset_left = 100.0
 offset_top = 99.0
@@ -348,7 +339,7 @@ texture_normal = SubResource("AtlasTexture_tqsjs")
 texture_hover = SubResource("AtlasTexture_i1nsk")
 script = ExtResource("8_tkmkt")
 
-[node name="DownButton" type="TextureButton" parent="UI/GameplayUI/ArrowPad"]
+[node name="DownButton" type="TextureButton" parent="UI/ArrowPad"]
 layout_mode = 0
 offset_left = 63.0
 offset_top = 103.0
@@ -361,7 +352,7 @@ texture_normal = SubResource("AtlasTexture_sttv0")
 texture_hover = SubResource("AtlasTexture_k410d")
 script = ExtResource("8_tkmkt")
 
-[node name="DownLeftButton" type="TextureButton" parent="UI/GameplayUI/ArrowPad"]
+[node name="DownLeftButton" type="TextureButton" parent="UI/ArrowPad"]
 layout_mode = 0
 offset_left = 9.0
 offset_top = 99.0
@@ -374,7 +365,7 @@ texture_normal = SubResource("AtlasTexture_th37j")
 texture_hover = SubResource("AtlasTexture_qnv76")
 script = ExtResource("8_tkmkt")
 
-[node name="LeftButton" type="TextureButton" parent="UI/GameplayUI/ArrowPad"]
+[node name="LeftButton" type="TextureButton" parent="UI/ArrowPad"]
 layout_mode = 0
 offset_top = 60.0
 offset_right = 89.0
@@ -386,44 +377,44 @@ texture_normal = SubResource("AtlasTexture_6c753")
 texture_hover = SubResource("AtlasTexture_pfim4")
 script = ExtResource("8_tkmkt")
 
-[node name="Form" type="Sprite2D" parent="UI/GameplayUI/ArrowPad"]
+[node name="Form" type="Sprite2D" parent="UI/ArrowPad"]
 position = Vector2(96, 96)
 texture = ExtResource("7_yur7r")
 region_enabled = true
 region_rect = Rect2(0, 384, 192, 192)
 
-[node name="ActionButton" type="Button" parent="UI/GameplayUI"]
+[node name="ActionButton" type="Button" parent="UI"]
+process_mode = 1
 modulate = Color(1, 1, 1, 0.486275)
 custom_minimum_size = Vector2(128, 128)
-layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 504.0
-offset_top = 504.0
-offset_right = 632.0
-offset_bottom = 632.0
+offset_left = -176.0
+offset_top = -176.0
+offset_right = -48.0
+offset_bottom = -48.0
 grow_horizontal = 0
 grow_vertical = 0
 focus_mode = 0
 theme = SubResource("Theme_owo8t")
 text = "Action"
 
-[node name="InteractButton" type="Button" parent="UI/GameplayUI"]
+[node name="InteractButton" type="Button" parent="UI"]
+process_mode = 1
 modulate = Color(1, 1, 1, 0.486275)
 custom_minimum_size = Vector2(128, 128)
-layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 344.0
-offset_top = 504.0
-offset_right = 472.0
-offset_bottom = 632.0
+offset_left = -336.0
+offset_top = -176.0
+offset_right = -208.0
+offset_bottom = -48.0
 grow_horizontal = 0
 grow_vertical = 0
 focus_mode = 0
@@ -432,13 +423,20 @@ theme_override_font_sizes/font_size = 34
 text = "Pick-Up"
 script = ExtResource("10_fburc")
 
-[node name="SwapItemButton" type="Button" parent="UI/GameplayUI"]
+[node name="SwapItemButton" type="Button" parent="UI"]
+process_mode = 1
 modulate = Color(1, 1, 1, 0.486275)
-layout_mode = 0
-offset_left = 576.0
-offset_top = 384.0
-offset_right = 704.0
-offset_bottom = 512.0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -336.0
+offset_right = -32.0
+offset_bottom = -208.0
+grow_horizontal = 0
+grow_vertical = 0
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxFlat_mshbb")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_t0j7k")
@@ -452,6 +450,7 @@ script = ExtResource("11_pl2jg")
 
 [node name="PauseMenu" type="Control" parent="UI"]
 process_mode = 2
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -512,7 +511,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("9_btfos")
-movable_UI_nodes = [NodePath("../../GameplayUI/ArrowPad"), NodePath("../../GameplayUI/ActionButton"), NodePath("../../GameplayUI/InteractButton"), NodePath("../../GameplayUI/SwapItemButton"), NodePath("../../InfoButton"), NodePath("../../PauseButton")]
+movable_UI_nodes = [NodePath("../../ArrowPad"), NodePath("../../ActionButton"), NodePath("../../InteractButton"), NodePath("../../SwapItemButton"), NodePath("../../InfoButton"), NodePath("../../PauseButton")]
 
 [node name="DoneButton" type="Button" parent="UI/PauseMenu/MoveUIControl"]
 custom_minimum_size = Vector2(128, 92)
@@ -567,12 +566,11 @@ theme = SubResource("Theme_owo8t")
 theme_override_styles/normal = SubResource("StyleBoxFlat_qwrod")
 text = "Pause"
 
-[connection signal="can_interact_with_item" from="Level/PlayerCharacter" to="UI/GameplayUI/InteractButton" method="_on_player_character_can_interact_with_item"]
-[connection signal="cant_interact_with_item" from="Level/PlayerCharacter" to="UI/GameplayUI/InteractButton" method="_on_player_character_cant_interact_with_item"]
-[connection signal="swapped_equipped_item" from="Level/PlayerCharacter" to="UI/GameplayUI/SwapItemButton" method="_on_player_character_swapped_equipped_item"]
-[connection signal="pressed" from="UI/GameplayUI/ActionButton" to="UI" method="_on_action_button_pressed"]
-[connection signal="pressed" from="UI/GameplayUI/InteractButton" to="UI/GameplayUI/InteractButton" method="_on_pressed"]
-[connection signal="pressed" from="UI/GameplayUI/SwapItemButton" to="UI/GameplayUI/SwapItemButton" method="_on_pressed"]
+[connection signal="can_interact_with_item" from="Level/PlayerCharacter" to="UI/InteractButton" method="_on_player_character_can_interact_with_item"]
+[connection signal="cant_interact_with_item" from="Level/PlayerCharacter" to="UI/InteractButton" method="_on_player_character_cant_interact_with_item"]
+[connection signal="swapped_equipped_item" from="Level/PlayerCharacter" to="UI/SwapItemButton" method="_on_player_character_swapped_equipped_item"]
+[connection signal="pressed" from="UI/InteractButton" to="UI/InteractButton" method="_on_pressed"]
+[connection signal="pressed" from="UI/SwapItemButton" to="UI/SwapItemButton" method="_on_pressed"]
 [connection signal="pressed" from="UI/PauseMenu/MenuPanel/HBoxContainer/ResumeButton" to="UI/PauseMenu" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="UI/PauseMenu/MenuPanel/HBoxContainer/MoveUIButton" to="UI/PauseMenu" method="_on_move_ui_button_pressed"]
 [connection signal="pressed" from="UI/PauseMenu/MenuPanel/HBoxContainer/ExitButton" to="UI/PauseMenu" method="_on_exit_button_pressed"]

@@ -4,6 +4,11 @@ var input_actions : PackedStringArray
 
 
 func _ready():
+	print(name)
+	print('position:',position)
+	print('z_index:',z_index)
+	print('visible:',visible)
+	print()
 	input_actions = name.replace('Button','').to_snake_case().split('_')
 	
 	var click_mask = BitMap.new()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://8qnlvxh8t548"]
+[gd_scene load_steps=3 format=3 uid="uid://8qnlvxh8t548"]
 
 [ext_resource type="Script" path="res://items/item.gd" id="1_spbxy"]
+[ext_resource type="Script" path="res://items/cooldown.gd" id="2_wrxu8"]
 
 [node name="Item" type="RigidBody2D"]
 z_index = 1
@@ -17,3 +18,14 @@ script = ExtResource("1_spbxy")
 process_mode = 1
 target_position = Vector2(32, 0)
 hit_from_inside = true
+
+[node name="Cooldown" type="ProgressBar" parent="."]
+process_mode = 1
+offset_right = 32.0
+offset_bottom = 8.0
+step = 1.0
+value = 100.0
+show_percentage = false
+script = ExtResource("2_wrxu8")
+
+[connection signal="completed" from="Cooldown" to="." method="_on_cooldown_completed"]

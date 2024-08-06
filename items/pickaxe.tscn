@@ -17,3 +17,10 @@ polygon = PackedVector2Array(0, -16, 14, -12, 16, -10, 2, -10, 2, 15, 0, 16, -2,
 
 [node name="RayCast2D" parent="." index="2"]
 target_position = Vector2(36.7701, -30.8538)
+
+[node name="Cooldown" parent="." index="3"]
+offset_left = 1.9721
+offset_top = -22.5413
+offset_right = 33.9721
+offset_bottom = -14.5413
+rotation = -0.698132

@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmuamiul2vq41"]
+
+[ext_resource type="Script" path="res://main_2.gd" id="1_6y6q8"]
+[ext_resource type="Resource" uid="uid://o7vey70s5txp" path="res://level/levels/new_level.tres" id="2_62csh"]
+[ext_resource type="PackedScene" uid="uid://tiyps4oow6mx" path="res://level/level_map_2.tscn" id="3_fwjlu"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_6y6q8")
+level_to_generate = ExtResource("2_62csh")
+
+[node name="LevelMap" parent="." instance=ExtResource("3_fwjlu")]

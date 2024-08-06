@@ -1,36 +1,49 @@
 #Change list:
-# Revised and retextured the LevelTileMap and its TileSet.
-# Added functionality to items.
-# Fixed pick up button.
-# Fixed pause button.
+# Added a Cooldown node and script to all items.
+# Made Pickaxe and Drill function differently but both usefully.
+# User can hold ActionButton for continuous uninterrupted item usage.
+#
+# Made a Level resource that can be assigned and properties needed for level generation.
+# Made a LevelEditor scene capable of saving level resources containing all rooms in the level and all required and given properties.
+# Made an AreaTileMap scene that is used in the LevelEditor for creating and adding properties to all areas possible in a level.
+# Made a second LevelMap scene (unused yet) that randomly generates levels using Level resource and a second Main scene (unused yet) that runs it.
+#
+# Added few prints for ArrowButtons debugging.
 
 #Current plans:
-# Drill breaks blocks faster and only horizontally.
-# Add a cooldown bar item usage / an action bar that shows when block will break based on their durability.
+# Fix ArrowPad and ArrowButtons.
+#
+# Create unbreakable borders when generating map.
+# Draw background that matches foreground.
+# Replace Main and LevelMap scenes.
+# Write script for player and item spawning in Level generation.
+# Add item and player spawn location setter in LevelEditor (through additional TileMapLayer?).
+#
+# Add connnection properties to areas for more seamless level generation.
+# Add more random areas for more varied generation.
+# Figure out how to make possible tiles and possible tile groups.
 #
 # Figure out how to use terrains.
-# Write script that procedurally generates levels using patterns as chunks and given parameters.
-# Parameters:
-# The level size to determine borders and how many chunks it needs.
-# Required rooms (chunks) for player starting area, level exit, and any additional special locations.
-# Depth for determining the block properties as well as background colors and such.
 
 
 #Bugs:
+# Buttons on the ArrowPad fucking disappear.
+#
 # (Not relevant for mobile experience) 
 # When changing movement direction with ArrowPad without releasing the mouse button, the direction is stuck until mouse exits.
 
 #Ideas:
 # No down left and down right buttons on ArrowPad.
 #
+# Experiment with PlayerCharacter script by trying to modify sideways movement with delta too?
+#
 # Bottom collision of PlayerCharacter gets wider when they run and thinner when they stand still.
 # Player can't change direction when in air / horizontal velocity is slower in air.
-#
-# Lower PlayerCharacter.
+# Lower/higher PlayerCharacter.
 #
 # Sort GUI children into GameplayUI and MenuUI
 #
-# Add drop button.
+# Add drop item button.
 
 
 

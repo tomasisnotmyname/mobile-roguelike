@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Level" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://level/level.gd" id="1_8v151"]
+
+[resource]
+script = ExtResource("1_8v151")
+areas = Array[Dictionary]([{
+"map_size": Vector2i(4, 4),
+"name": &"StartingArea",
+"probability": 1.0,
+"starting_area": true,
+"tile_map": [["Unbreakable", "Basic", "Basic", "Basic"], ["Unbreakable", "none", "none", "Basic"], ["Unbreakable", "none", "none", "Basic"], ["Unbreakable", "Basic", "Basic", "Basic"]]
+}, {
+"map_size": Vector2i(8, 8),
+"name": &"ParkourArea",
+"probability": 0.1,
+"starting_area": false,
+"tile_map": [["Basic", "Basic", "none", "none", "Basic", "Basic", "Basic", "Basic"], ["Basic", "Basic", "none", "none", "none", "none", "none", "Basic"], ["Basic", "Basic", "none", "none", "Basic", "Basic", "none", "Basic"], ["Basic", "none", "none", "none", "Basic", "none", "none", "Basic"], ["Basic", "none", "none", "none", "none", "none", "none", "Basic"], ["Basic", "none", "none", "none", "Basic", "Basic", "none", "Basic"], ["Basic", "none", "none", "none", "none", "none", "none", "Basic"], ["Basic", "Basic", "none", "none", "Basic", "Basic", "Basic", "Basic"]]
+}, {
+"map_size": Vector2i(8, 12),
+"name": &"WideDrop",
+"probability": 0.1,
+"starting_area": false,
+"tile_map": [["Basic", "Basic", "none", "none", "Basic", "Basic", "Basic", "Basic", "Basic", "Basic", "Basic", "Basic"], ["Basic", "none", "none", "none", "Basic", "Basic", "Basic", "Basic", "none", "none", "none", "Basic"], ["Basic", "none", "none", "none", "Basic", "Basic", "Basic", "none", "none", "none", "none", "Basic"], ["Basic", "none", "none", "none", "none", "none", "none", "none", "none", "none", "Basic", "Basic"], ["Basic", "none", "none", "none", "none", "none", "none", "none", "none", "none", "Basic", "Basic"], ["Basic", "none", "none", "none", "none", "Basic", "Basic", "none", "none", "none", "none", "Basic"], ["Basic", "none", "none", "none", "Basic", "Basic", "Basic", "Basic", "none", "none", "none", "Basic"], ["Basic", "Basic", "none", "none", "Basic", "Basic", "Basic", "Basic", "none", "none", "none", "Basic"]]
+}, {
+"map_size": Vector2i(4, 12),
+"name": &"VerticalTunnel",
+"probability": 0.1,
+"starting_area": false,
+"tile_map": [["Basic", "none", "none", "Basic", "Basic", "Basic", "Basic", "Basic", "Basic", "Basic", "Basic", "Basic"], ["Basic", "none", "none", "none", "Basic", "none", "none", "none", "none", "none", "Basic", "Basic"], ["Basic", "none", "none", "none", "none", "none", "Basic", "none", "Basic", "none", "none", "none"], ["Basic", "none", "none", "Basic", "Basic", "Basic", "Basic", "Basic", "Basic", "Basic", "Basic", "Basic"]]
+}, {
+"map_size": Vector2i(4, 4),
+"name": &"HorizontalTunnel1",
+"probability": 0.1,
+"starting_area": false,
+"tile_map": [["Basic", "none", "none", "Basic"], ["Basic", "none", "Basic", "Basic"], ["Basic", "none", "Basic", "Basic"], ["Basic", "none", "none", "Basic"]]
+}, {
+"map_size": Vector2i(4, 4),
+"name": &"HorizontalTunnel2",
+"probability": 0.1,
+"starting_area": false,
+"tile_map": [["Basic", "Basic", "none", "Basic"], ["Basic", "Basic", "none", "Basic"], ["Basic", "none", "none", "Basic"], ["Basic", "none", "none", "Basic"]]
+}, {
+"map_size": Vector2i(4, 4),
+"name": &"Pile",
+"probability": 0.05,
+"starting_area": false,
+"tile_map": [["none", "none", "none", "Basic"], ["none", "none", "Basic", "Basic"], ["Basic", "Basic", "Basic", "Basic"], ["none", "none", "Basic", "Basic"]]
+}, {
+"map_size": Vector2i(4, 4),
+"name": &"FilledArea",
+"probability": 0.3,
+"starting_area": false,
+"tile_map": [["Basic", "Basic", "Basic", "Basic"], ["Basic", "Basic", "Basic", "Basic"], ["Basic", "Basic", "Basic", "Basic"], ["Basic", "Basic", "Basic", "Basic"]]
+}, {
+"map_size": Vector2i(4, 4),
+"name": &"EnclosedArea",
+"probability": 0.15,
+"starting_area": false,
+"tile_map": [["Basic", "Basic", "Basic", "Basic"], ["Basic", "Basic", "none", "Basic"], ["Basic", "none", "none", "Basic"], ["Basic", "Basic", "Basic", "Basic"]]
+}])

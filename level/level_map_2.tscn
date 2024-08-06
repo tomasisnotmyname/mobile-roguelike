@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://tiyps4oow6mx"]
+
+[ext_resource type="Script" path="res://level/level_map_2.gd" id="1_cojic"]
+[ext_resource type="Texture2D" uid="uid://d4b3m6x1x36ta" path="res://textures/blocks_spritesheet.png" id="2_dlxac"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15bw7"]
+texture = ExtResource("2_dlxac")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/probability = 0.7
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:0/0/custom_data_0 = "Basic"
+0:0/1 = 1
+0:0/1/modulate = Color(0.6, 0.6, 0.6, 1)
+0:0/1/probability = 0.6
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:0/1/custom_data_0 = "Unbreakable"
+0:1/next_alternative_id = 2
+0:1/0 = 0
+0:1/0/probability = 0.3
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:1/0/custom_data_0 = "Basic"
+0:1/1 = 1
+0:1/1/modulate = Color(0.6, 0.6, 0.6, 1)
+0:1/1/probability = 0.3
+0:1/1/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:1/1/custom_data_0 = "Unbreakable"
+0:2/0 = 0
+0:2/0/modulate = Color(0.6, 0.6, 0.6, 1)
+0:2/0/probability = 0.1
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:2/0/custom_data_0 = "Unbreakable"
+
+[sub_resource type="TileSet" id="TileSet_a4jgh"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
+custom_data_layer_0/name = "Type"
+custom_data_layer_0/type = 4
+sources/0 = SubResource("TileSetAtlasSource_15bw7")
+
+[node name="LevelMap" type="Node2D"]
+script = ExtResource("1_cojic")
+
+[node name="Background" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_a4jgh")
+collision_enabled = false
+
+[node name="Foreground" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_a4jgh")
